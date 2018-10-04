@@ -1,0 +1,11 @@
+Now 306.
+Now 307.
+Now 308.
+Traceback (most recent call last):
+  File "/Users/owl/Pycharm/PycharmProjects/scraping/scrappy_v03.py", line 120, in <module>
+    info = parsing_acc('https://rulove.ru/anketa/' + str(tested_i))
+  File "/Users/owl/Pycharm/PycharmProjects/scraping/scrappy_v03.py", line 64, in parsing_acc
+    text_nation = all_about[5].getText()
+IndexError: list index out of range
+
+Process finished with exit code 1
