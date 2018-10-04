@@ -5,23 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ad52b58-5662-4394-a9e5-7fcc383567c5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prainua/exit_.csv" afterPath="$PROJECT_DIR$/prainua/exit_.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proxy/proxy_checker v. 1.0.3/CONST.py" afterPath="$PROJECT_DIR$/proxy/proxy_checker v. 1.0.3/CONST.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proxy/proxy_checker v. 1.0.3/proxies.txt" afterPath="$PROJECT_DIR$/proxy/proxy_checker v. 1.0.3/proxies.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proxy/proxy_checker v. 1.0.3/proxies_good.txt" afterPath="$PROJECT_DIR$/proxy/proxy_checker v. 1.0.3/proxies_good.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proxy/proxy_checker v. 1.0.3/proxy_checker.bat" afterPath="$PROJECT_DIR$/proxy/proxy_checker v. 1.0.3/proxy_checker.bat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proxy/proxy_finder/proxies.txt" afterPath="$PROJECT_DIR$/proxy/proxy_finder/proxies.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proxy/proxy_finder/proxy_finder.py" afterPath="$PROJECT_DIR$/proxy/proxy_finder/proxy_finder.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rulove/freeze.txt" afterPath="$PROJECT_DIR$/rulove/freeze.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rulove/scrappy_v01.py" afterPath="$PROJECT_DIR$/rulove/scrappy_v01.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rulove/scrappy_v02.py" afterPath="$PROJECT_DIR$/rulove/scrappy_v02.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rulove/scrappy_v03.py" afterPath="$PROJECT_DIR$/rulove/scrappy_v03.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rulove/scrappy_v04.py" afterPath="$PROJECT_DIR$/rulove/scrappy_v04.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rulove/test_2.html" afterPath="$PROJECT_DIR$/rulove/test_2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rulove/tests/1.html" afterPath="$PROJECT_DIR$/rulove/tests/1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rulove/tests/mathematicians.py" afterPath="$PROJECT_DIR$/rulove/tests/mathematicians.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rulove/tests/test_1.py" afterPath="$PROJECT_DIR$/rulove/tests/test_1.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rulove/tests/test_bs4.py" afterPath="$PROJECT_DIR$/rulove/tests/test_bs4.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
