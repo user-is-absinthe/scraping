@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80abec9e-5f51-4993-9960-0bd9bbae74fb" name="Default" comment="Выбрал сайт.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scraping.iml" afterPath="$PROJECT_DIR$/.idea/scraping.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/beboo/help.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/beboo/scrap_beboo_v1.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proxy/proxy_finder/proxy_finder.py" afterPath="$PROJECT_DIR$/proxy/proxy_finder/proxy_finder.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/variants.txt" afterPath="$PROJECT_DIR$/variants.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,11 +22,53 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="variants.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="variants.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/variants.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
               <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scrap_beboo_v1.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/beboo/scrap_beboo_v1.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="804">
+              <caret line="64" column="46" lean-forward="false" selection-start-line="64" selection-start-column="46" selection-end-line="64" selection-end-column="46" />
+              <folding>
+                <element signature="e#2#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scrappy_v04.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rulove/scrappy_v04.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="help.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/beboo/help.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="10" lean-forward="true" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="all.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/badoo/all.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -67,6 +107,8 @@
         <option value="$PROJECT_DIR$/browsercookie-0.7.5/setup.py" />
         <option value="$PROJECT_DIR$/proxy/proxy_finder/proxy_finder.py" />
         <option value="$PROJECT_DIR$/variants.txt" />
+        <option value="$PROJECT_DIR$/beboo/help.txt" />
+        <option value="$PROJECT_DIR$/beboo/scrap_beboo_v1.py" />
       </list>
     </option>
   </component>
@@ -104,6 +146,21 @@
             <path>
               <item name="scraping" type="b2602c69:ProjectViewProjectNode" />
               <item name="scraping" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scraping" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scraping" type="462c0819:PsiDirectoryNode" />
+              <item name="badoo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scraping" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scraping" type="462c0819:PsiDirectoryNode" />
+              <item name="beboo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scraping" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scraping" type="462c0819:PsiDirectoryNode" />
+              <item name="rulove" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -294,7 +351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1539391653179</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Выбрал сайт.">
+      <created>1539552144721</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1539552144722</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -309,7 +373,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33152175" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32826087" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30869564" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30869564" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39456522" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -330,7 +394,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Выбор сайта." />
-    <option name="LAST_COMMIT_MESSAGE" value="Выбор сайта." />
+    <MESSAGE value="Выбрал сайт." />
+    <option name="LAST_COMMIT_MESSAGE" value="Выбрал сайт." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -341,32 +406,11 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/proxy/proxy_finder/proxy_finder.bat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="41" lean-forward="false" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/proxy/proxy_finder/proxy_finder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="15" lean-forward="true" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/badoo/all.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="75" lean-forward="false" selection-start-line="4" selection-start-column="75" selection-end-line="4" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/proxy/proxy_checker v. 1.0.3/proxy_checker.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4080">
@@ -399,6 +443,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -406,6 +451,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -611,13 +657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/badoo/all.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="75" lean-forward="false" selection-start-line="4" selection-start-column="75" selection-end-line="4" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../Pycharm_venv/scraping_venv/Lib/site-packages/browsercookie/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -638,6 +677,40 @@
         <state relative-caret-position="170">
           <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/badoo/all.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beboo/help.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="10" lean-forward="true" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rulove/scrappy_v04.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beboo/scrap_beboo_v1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="804">
+          <caret line="64" column="46" lean-forward="false" selection-start-line="64" selection-start-column="46" selection-end-line="64" selection-end-column="46" />
+          <folding>
+            <element signature="e#2#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
