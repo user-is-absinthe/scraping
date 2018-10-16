@@ -68,7 +68,7 @@ def _get_cookies():
     return browsercookie.chrome()
 
 _DEFAULT_HEADER = {
-    'User-Agent' : _get_user_agent(),
+    'User-Agent': _get_user_agent(),
     'Accept': 'text/html,application/xhtml+xml,application/xml,application/pdf;q=0.9,image/webp,image/apng,*/*;q=0.8',
     'Accept-Language': 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3',
     'Accept-Encoding': 'gzip, deflate'
@@ -116,7 +116,7 @@ def get_all_proxy(q, max_page):
     driver.find_element_by_css_selector('.button .c_button .s_button').click()'''
 
     resp = get_request(q)
-    #open('fail.html', 'w', encoding='UTF-8').write(resp.text)
+    # open('fail.html', 'w', encoding='UTF-8').write(resp.text)
     google_soup = BeautifulSoup(resp.text, 'html.parser')
     try:
         count_res = google_soup.find_all("div", {"id": "resultStats"})[0].text
@@ -129,8 +129,8 @@ def get_all_proxy(q, max_page):
     while True:
         print_message('Current page: {}'.format(page_counter+1))
         a_from_current_page = []
-        #e = [google_soup.find_all('span')[0] for _ in google_soup.find_all('a') if _.find_all('span')]
-        #s = [e.text for _ in e]
+        # e = [google_soup.find_all('span')[0] for _ in google_soup.find_all('a') if _.find_all('span')]
+        # s = [e.text for _ in e]
         for a in google_soup.find_all('a'):
             try:
                 site_url = a['href']
