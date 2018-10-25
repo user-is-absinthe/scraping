@@ -42,6 +42,7 @@ def manga_saver(first_url, proxy_path=''):
     counter = 1
     dir_name = url_first.replace('https://i.nhentai.net/galleries/', '')
     dir_name = dir_name.replace('/1.jpg', '')
+    dir_name = dir_name.replace('/1.png', '')
     if len(proxy_path) != 0:
         use_proxy = 1
     # if use_proxy == 1:
@@ -49,7 +50,7 @@ def manga_saver(first_url, proxy_path=''):
         proxy = list(load_proxies('proxies_good.txt'))
     print('Saved in {} directory.'.format(dir_name))
     denial_of_service = 0
-    max_denial_of_service = 20
+    max_denial_of_service = 10
     png = False
     while True:
         if use_proxy == 1:
@@ -57,6 +58,7 @@ def manga_saver(first_url, proxy_path=''):
         else:
             now_proxy = 0
         url_now = first_url.replace('/1.jpg', '/' + str(counter) + '.jpg')
+        # url_now = first_url.replace('/1.png', '/' + str(counter) + '.png')
         if png:
             url_now = url_now.replace('.jpg', '.png')
         if img_saver(url_now, counter, now_proxy, dir_name, png) == 1:
@@ -73,7 +75,8 @@ def manga_saver(first_url, proxy_path=''):
 
 
 if __name__ == '__main__':
-    url_first = 'https://i.nhentai.net/galleries/366097/1.jpg'
+    url_first = 'https://i.nhentai.net/galleries/12346798/1.jpg'
+    print(url_first)
     path_to_proxy = 'proxies_good.txt'
     # use_proxy = 1
     manga_saver(url_first, path_to_proxy)
