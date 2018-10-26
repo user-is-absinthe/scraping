@@ -49,6 +49,10 @@ def log_error(e):
 def load_proxies(input_file):
     with open(input_file, "r") as Fi:
         proxies = set(Fi.readlines())
+
+    proxies = list(proxies)
+    for proxy in proxies:
+        pass
     return proxies
 
 
@@ -58,13 +62,15 @@ def login():
 
 def main():
     all_country = open('all_codes_country.txt', 'r')
-    all_proxy = load_proxies('proxies_good.txt')
+    all_proxy = load_proxies(input_file='proxies_good.txt')
 
     for country in all_country:
         to_search = 'http://beboo.ru/search?iaS=0&status=all&country={}&region=all&town=all&lookFor=0&reason=0&endAge=80&startAge=18&aS%5B25%5D%5B%5D=0&aS%5B26%5D%5B%5D=0&aS%5B28%5D%5B%5D=0&aS%5B29%5D%5B%5D=0&aS%5B27%5D%5B%5D=0&aS%5B32%5D%5B%5D=0&aS%5B30%5D%5B%5D=0&aS%5B31%5D%5B%5D=0&height=0&height=0&aS%5B19%5D%5B%5D=0&aS%5B23%5D%5B%5D=0&aS%5B24%5D%5B%5D=0&aS%5B20%5D%5B%5D=0&aS%5B21%5D%5B%5D=0&aS%5B22%5D%5B%5D=0&aS%5B33%5D%5B%5D=0&aS%5B35%5D%5B%5D=0&aS%5B34%5D%5B%5D=0'.format(country)
+        print('Now we work with {} code.'.format(country))
         counter_page = 0
         while True:
             counter_page += 1
+            print('{} search page, code {}.'.format(counter_page, country))
 
             page = simple_get(to_search)
 
@@ -75,6 +81,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-    # TODO: адекватный обход по id сделать не получиться, НУЖНО перебирать страны, внутри стран страницы и так далее
-    # страна - страница (проверка уникальности) - пользователи
