@@ -15,8 +15,8 @@ id_comment = 0
 id_author = 0
 proxy = []
 denial_of_service = 0
-max_denial_of_service = 15
-
+max_denial_of_service = 5
+max_missed_together = 5
 
 def load_proxies(input_file):
     with open(input_file, "r") as Fi:
@@ -31,17 +31,19 @@ def get_html(url):
     print('Now use {} proxy.'.format(now_proxy))
     in_proxy = {"http": now_proxy}
     head = {'User-Agent': generate_user_agent()}
-    print('I am human: ', head['User-Agent'])
+    print('I am human: ', head)
     try:
-        r = requests.get(url, proxies=in_proxy, headers=head)
+        r=requests.get(url, proxies=in_proxy, headers = head)
         denial_of_service = 0
-    except:
+    except Exception as er:
+        print(er)
         denial_of_service += 1
         if denial_of_service == max_denial_of_service:
             print('Too more exceptions.')
-            sys.exit(20)
+            #sys.exit(20)
+            return False
         else:
-            print('\n\t\t\tEXCEPT n{}!!!\n'.format(denial_of_service))
+            print('\t\t\tEXCEPT n{}!!!'.format(denial_of_service))
             get_html(url=url)
     return r
 
@@ -89,13 +91,13 @@ def write_csv(data):
     if data['id_item']=='1':
         file_to_csv.write(
             'id_item' + ';' + 'path' + ';' 'title' + ';' + 'price' + ';' + 'info' + ';' + 'description' + ';'
-            + 'author' + ';' + 'author_url' + ';' + 'recomend' + ';' + 'delivery' + ';' + 'return' + ';' + 'keywords'
+            + 'author' + ';' + 'author_url' +';' + 'recomend' + ';' + 'delivery' + ';' + 'return' + ';' + 'keywords'
             + ';' + 'item_url' + '\n'
         )
 
     file_to_csv.write(
         data['id_item'] + ';' + data['path'] + ';' + data['title'] + ';' + data['price'] + ';' + data['info'] + ';' +
-        data['description'] + ';' + data['author'] + ';' + data['author_url'] + ';' + data['recomend'] + ';' +
+        data['description'] + ';'+ data['author'] + ';' + data['author_url'] + ';' + data['recomend'] + ';' +
         data['delivery'] + ';' + data['return_'] + ';' + data['key'] + ';' + data['url']+'\n'
     )
     print('\nTo csv success! New item №' + data['id_item'])
@@ -120,7 +122,12 @@ def write_author(data):
 
 def get_author_data(url):
     global id_author
-    soup = BeautifulSoup(get_html(url).text, 'lxml')
+    try:
+        html_a = get_html(url).text
+    except:
+        print('Authors problem ',url)
+        return False
+    soup = BeautifulSoup(html_a, 'lxml')
     id_author = id_author+1
     try:
         photo = soup.find('div', class_='profile-avatar-viewer').find('img')
@@ -129,7 +136,12 @@ def get_author_data(url):
     if photo != 'Null':
         ph_url = photo.get('src')
         index = 'A' + str(id_author)
-        img_donwload(ph_url, index)
+        try:
+            img_donwload(ph_url, index)
+        except Exception as er:
+            print(er)
+            ph_url = mainpage + ph_url #https://www.livemaster.ru/image/empty/avatars/unknown_userX245.png?03102016
+            img_donwload(ph_url, index)
     name = soup.find('section', class_='profile-user-info').find('h1').text.replace('\n','').replace(',','').replace('\t','').replace('\r','').replace('"','').replace('\\U','').replace(';','')
     try:
         info =soup.find('ul', class_ ='profile-user-list').text.replace('\n',' ').replace(',','').replace('\t','').replace('\r','').replace('"','').replace('\\U','').replace(';','').replace('  ',' ')
@@ -153,16 +165,27 @@ def get_author_data(url):
                    'url' : url}
     write_author(data_author)
 
-def get_item_data(url):
-    html = get_html(url).text
+def get_item_data(html):
+    #html = get_html(url).text
     soup = BeautifulSoup(html, 'lxml')
     items = soup.find_all('a', class_='item-block__name')
     #id_item = 0
     for item in items:
-        global mainpage
+        global mainpage, max_missed_together
         item_url = mainpage + item.get('href')
         print(item_url)
-        item_soup = BeautifulSoup(get_html(item_url).text, 'lxml')
+        try:
+            item_html = get_html(item_url).text
+            tries = 0
+        except Exception as er:
+            print(er)
+            tries = tries + 1
+            if tries < max_missed_together:
+                continue
+            else:
+                print('Max_missed_together_item')
+                sys.exit(21)
+        item_soup = BeautifulSoup(item_html, 'lxml')
         global id_item
         id_item = id_item + 1
         try:
@@ -174,7 +197,11 @@ def get_item_data(url):
             for photo in photos:
                 ph_url = photo.get('href')
                 index = index + 1
-                img_donwload(ph_url, index)
+                try:
+                    img_donwload(ph_url, index)
+                except Exception as er:
+                    print(er)
+                    continue
         title = str(item_soup.find('h1', class_='item-header js-translate-item-name').text.replace('\n','').replace(',','').replace('\t','').replace('\r','').replace('"','').replace('\\U','').replace(';',''))
         try:
             price = str(item_soup.find('span', class_='price').text.split('&')[0].replace('\n','').replace(',','').replace('\t','').replace('\r','').replace('"','').replace('\\U','').replace(';','')) #+  item_soup.find('span', class_='cr js-stat-main-items-money').text
@@ -273,15 +300,25 @@ def get_item_data(url):
 
 def main():
     base_url = 'https://www.livemaster.ru/catalogue/suveniry-i-podarki?from='
-    global proxy
+    global proxy, max_missed_together
     proxy = load_proxies('proxies_good.txt')
     total_pages = get_total_pages(get_html(base_url).text)
 
     for i in range (0, total_pages + 40, 40): #to all pages
     #for i in range(0, 40, 40): #for test
         url_gen = base_url + str(i)
-        # get_html(url_gen)
-        get_item_data(url_gen)
+        try:
+            html = get_html(url_gen).text
+            tries = 0
+        except Exception as er:
+            print(er)
+            tries = tries +1
+            if tries < max_missed_together:
+                continue
+            else:
+                print('Max paginations missed')
+                sys.exit(22)
+        get_item_data(html)
 
 
 if __name__ == '__main__':
