@@ -1,0 +1,40 @@
+user1@ubuntu:~$ mkdir qqqqq
+user1@ubuntu:~$ cd qqqqq/
+user1@ubuntu:~/qqqqq$ nano script.sh
+user1@ubuntu:~/qqqqq$ cat script.sh 
+user1@ubuntu:~/qqqqq$ crontab -e
+no crontab for user1 - using an empty one
+
+Select an editor.  To change later, run 'select-editor'.
+  1. /bin/ed
+  2. /bin/nano        <---- easiest
+  3. /usr/bin/vim.tiny
+
+Choose 1-3 [2]: 2
+###
+* * * * * echo date >> /home/user1/qqqqq/from_cron.txt
+###
+crontab: installing new crontab
+user1@ubuntu:~/qqqqq$
+user1@ubuntu:~/qqqqq$ cat from_cron.txt 
+Вт окт 30 03:36:01 MSK 2018
+Вт окт 30 03:37:01 MSK 2018
+Вт окт 30 03:38:01 MSK 2018
+user1@ubuntu:~/qqqqq$
+user1@ubuntu:~/qqqqq$ echo "$(date +'%y-%m-%d %T')"; cat from_cron.txt 
+18-10-30 03:40:56
+Вт окт 30 03:36:01 MSK 2018
+Вт окт 30 03:37:01 MSK 2018
+Вт окт 30 03:38:01 MSK 2018
+Вт окт 30 03:39:01 MSK 2018
+Вт окт 30 03:40:01 MSK 2018
+user1@ubuntu:~/qqqqq$
+user1@ubuntu:~/qqqqq$ echo "$(date +'%y-%m-%d %T')"; cat from_cron.txt 
+18-10-30 03:42:10
+Вт окт 30 03:36:01 MSK 2018
+Вт окт 30 03:37:01 MSK 2018
+Вт окт 30 03:38:01 MSK 2018
+Вт окт 30 03:39:01 MSK 2018
+Вт окт 30 03:40:01 MSK 2018
+Вт окт 30 03:41:01 MSK 2018
+Вт окт 30 03:42:01 MSK 2018

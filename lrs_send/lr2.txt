@@ -1,0 +1,69 @@
+1.
+tux@slitaz:~$ cd /
+tux@slitaz:/$ pwd
+/
+
+2-12.
+ls
+ls -r
+ls -R
+ls -Slh
+du -h
+ls -F / | sed 's/\///g'
+ls -t
+ls -tu
+ls -t
+ls -d ?[e,y,u,i,o,a]*
+ls -Ahl > /home/user1/dirlist.txt
+
+13-18.
+cat /home/user1/dirlist.txt
+tac dirlist.txt
+cat -n dirlist.txt
+cat -b dirlist.txt
+nano pusto
+cat pusto -s
+
+19-22.
+mkdir linux_lab2; cd linux_lab2
+cp ../dirlist.txt dirlist.txt
+rm ../dirlist.txt
+
+23-36.
+mkdir manyfiles
+touch manyfiles/a{1..100}
+mkdir manyfiles10; mkdir manyfiles30
+mkdir manyfiles1; mv manyfiles/a{1..10} manyfiles1/
+mkdir manyfiles2; cp manyfiles/a{*0,*5} manyfiles2/
+rm -r manyfiles/a{*0, *2, *4, *6, *8}
+mkdir manyfiles3; cp manyfiles1/ manyfiles3
+rm -rf manyfiles1
+mkdir Toppler; cd Toppler; touch high11; touch low11; cd ..
+sudo cp Toppler/high11; sudo cp Toppler/low11;
+mv /tmp/*11 /home/user1/
+cp -r Toppler/ /tmp
+mv Toppler/ Roller/
+mv -v Roller/ /home/user1/
+
+37-46.
+echo $((3+5)); echo $((6/4)); echo $((10/(3+2)))
+echo "0.15*75" |bc -l; echo "0.05*350" |bc -l
+V1=4; V2=$((V1*2)); echo $V2
+VAR1="Работа в оболочке"
+echo $VAR1
+VAR2=$VAR1'BASH'
+VAR3=$HISTFILESIZE; echo $VAR3
+echo $VAR1; echo $VAR2; echo $VAR3
+unset VAR1
+echo $VAR2
+
+47-50.
+ГДЕ dirlist, ЕСЛИ ЕГО УДАЛИЛИ???
+ОТКУДА В dirlist МЕСЯЦА?!
+mkdir grep; cd grep; mv ../grep_month_name.txt; mv../grep_other_monthes.txt.
+grep -rn 'stud'
+locate bash; find / -name "bash"
+find / -mmin 60
+find / -type l -print
+PS1="\u@\t \ $"
+cd /home/user1/; rm manyfiles

@@ -1,0 +1,5 @@
+* * * * * echo 'Im a file.' > /home/user1/qqqqq/"$(date +"%y-%m-%d %T")".txt
+
+* * * * * echo "Im a file." > /home/user1/qqqqq/"$(date +'%y-%m-%d %T')".txt
+
+* * * * * echo date >> /home/user1/qqqqq/from_cron.txt

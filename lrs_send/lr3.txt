@@ -1,0 +1,46 @@
+dir: drwxrwxr-x; file: -rw-rw-r--
+id -nG user1
+ls -ld /bin/ps
+stat -c "%a" /bin/ps
+man stat
+stat -c "%a" /home/user1/
+stat /home/user1/ > /home/user1/f0
+-rw-rw-r--
+sudo chmod 600 f0
+chmod a+r f0
+sudo chmod 777 script.sh
+sudo chmod 777 d1
+done: chmod 000 *any_file*
+mkdir -p d1/d2/d3; touch d1/f1; touch d1/d2/f2; touch d1/d2/d3/f3
+chmod 400 d1/f1
+chmod -R a+rw- d1/
+chmod -R u-r d1/; chmod -R go+r d1/
+chmod a+rw- d1/
+find d1/ -type f | xargs chmod -rw-r--r--
+umask 000
+umask -rw-r--r--
+mkdir two; chmod u+s two
+find / -type f -perm -04000 -o -perm -02000 | less
+ls -lh two
+rm -rf two
+ls -la /etc/passwd
+sudo cat /etc/shadow (nope)
+all \ {русские буквы и спец символы}
+useradd -o -u1000 -d /home/nouser -s /sbin/nologin -G studentl test1
+useradd test2
+usermod -l test3 -d /home/test3 -m test2
+userdel -frZ test3
+cd /; sudo find -name 'useradd'; sudo -i
+useradd test4; passwd test4
+hage test4 -E 2018-12-31
+passwd test4 -d
+passwd test4 -l
+addgroup --gid 1010 xusers
+adduser user1 xusers
+groupmod xusers -n yusers
+who
+last
+who /var/run/utmp
+last /var/log/wtmp
+cat /etc/passwd && top
+stat f1

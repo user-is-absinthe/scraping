@@ -71,12 +71,12 @@ def write_comment(data):
         file_to_csv = open(file_name + '.csv', 'w', encoding='UTF-16')
     if id_comment == 0:
         file_to_csv.write(
-            'id_comment' + ';' + 'id_item' + ';' 'title' + ';' + 'name' + ';' + 'comment' + '\n'
+            'id_comment' + ';' + 'id_item' + ';' 'title' + ';' + 'name' + ';' + 'date' + ';'+ 'comment' + '\n'
         )
     id_comment = id_comment + 1
     id_comment_str = str(id_comment)
     file_to_csv.write(
-        id_comment_str + ';' + data['id'] + ';' + data['title'] + ';' + data['name'] + ';' + data['comment'] + '\n'
+        id_comment_str + ';' + data['id'] + ';' + data['title'] + ';' + data['name'] + ';' + data['date'] + ';'+ data['comment'] + '\n'
     )
     print('comment csv success! id ' + id_comment_str)
     file_to_csv.close()
@@ -90,15 +90,16 @@ def write_csv(data):
         file_to_csv = open(file_name + '.csv', 'w', encoding='UTF-16')
     if data['id_item']=='1':
         file_to_csv.write(
-            'id_item' + ';' + 'path' + ';' 'title' + ';' + 'price' + ';' + 'info' + ';' + 'description' + ';'
-            + 'author' + ';' + 'author_url' +';' + 'recomend' + ';' + 'delivery' + ';' + 'return' + ';' + 'keywords'
-            + ';' + 'item_url' + '\n'
+            'id_item' + ';' + 'path' + ';' 'title' + ';' + 'price' + ';' + 'inf_form' + ';' + 'inf_time' + ';'
+            + 'inf_mat' + ';' + 'inf_size' + ';' + 'description' + ';' + 'author' + ';' + 'author_url' +';' + 'recomend'
+            + ';' + 'delivery' + ';' + 'pay' + ';' + 'return' + ';' + 'keywords' + ';' + 'item_url' + '\n'
         )
 
     file_to_csv.write(
-        data['id_item'] + ';' + data['path'] + ';' + data['title'] + ';' + data['price'] + ';' + data['info'] + ';' +
-        data['description'] + ';'+ data['author'] + ';' + data['author_url'] + ';' + data['recomend'] + ';' +
-        data['delivery'] + ';' + data['return_'] + ';' + data['key'] + ';' + data['url']+'\n'
+        data['id_item'] + ';' + data['path'] + ';' + data['title'] + ';' + data['price'] + ';' + data['inf_form'] + ';'
+        + data['inf_time'] + ';' + data['inf_mat'] + ';' + data['inf_size'] + ';' +  data['description'] + ';'+ data['author']
+        + ';' + data['author_url'] + ';' + data['recomend'] + ';' + data['delivery'] + ';' + data ['pay'] + ';'
+        + data['return_'] + ';' + data['key'] + ';' + data['url']+'\n'
     )
     print('\nTo csv success! New item №' + data['id_item'])
     file_to_csv.close()
@@ -111,11 +112,13 @@ def write_author(data):
         file_to_csv = open(file_name + '.csv', 'w', encoding='UTF-16')
     if data['id']=='1':
         file_to_csv.write(
-            'id' + ';' + 'name' + ';' + 'info' + ';' + 'description' + ';' + 'work' + 'url' +'\n'
+            'id' + ';' + 'name' + ';' + 'inf_loc' + ';' + 'inf_time' + ';' + 'inf_shop' + ';' + 'inf_works' + ';'
+            + 'description' + ';' + 'work' + ';' + 'url' +'\n'
         )
 
     file_to_csv.write(
-        data['id'] + ';' + data['name']  + data['info'] + ';' + data['description'] + ';'+ data['work'] + ';' + data['url']+'\n'
+        data['id'] + ';' + data['name']+ ';' + data['inf_loc'] + ';' + data['inf_time'] + ';' + data['inf_shop'] + ';'
+        + data['inf_works'] + ';'+ data['description'] + ';'+ data['work'] + ';' + data['url']+'\n'
     )
     print('\nauthor csv success!  №' + data['id'])
     file_to_csv.close()
@@ -132,8 +135,8 @@ def get_author_data(url):
     try:
         photo = soup.find('div', class_='profile-avatar-viewer').find('img')
     except:
-        photo = 'Null'
-    if photo != 'Null':
+        photo = ''
+    if photo != '':
         ph_url = photo.get('src')
         index = 'A' + str(id_author)
         try:
@@ -142,24 +145,49 @@ def get_author_data(url):
             print(er)
             ph_url = mainpage + ph_url #https://www.livemaster.ru/image/empty/avatars/unknown_userX245.png?03102016
             img_donwload(ph_url, index)
-    name = soup.find('section', class_='profile-user-info').find('h1').text.replace('\n','').replace(',','').replace('\t','').replace('\r','').replace('"','').replace('\\U','').replace(';','')
-    try:
-        info =soup.find('ul', class_ ='profile-user-list').text.replace('\n',' ').replace(',','').replace('\t','').replace('\r','').replace('"','').replace('\\U','').replace(';','').replace('  ',' ')
+    name = soup.find('section', class_='profile-user-info').find('h1').text.replace('\n','').replace(',','').replace(
+        '\t','').replace('\r','').replace('"','').replace('\\U','').replace(';','')
+    try:#inf_loc inf_time inf_shop inf_works
+        info = soup.find('ul', class_='profile-user-list').find_all('li')
+        print(info)
+        for j in range(len(info)):
+            info[j] = info[j].text.replace('\n','').replace(',','').replace('\t','').replace('\r','').replace(
+                '"','').replace('\\U','').replace(';','')
+        inf_loc = info[0]
+        inf_time = info[1]
+        inf_shop = info[2]
+        inf_works = info[3]
     except:
-        info = 'Null'
+        inf_loc = ''
+        inf_time = ''
+        inf_shop = ''
+        inf_works = ''
+    # try:
+    #     work = soup.find('span', class_='work-types--title').text.replace('\n',' ').replace(',','').replace(
+    #         '\t','').replace('\r','').replace('"','').replace('\\U','').replace(';','').replace('  ',' ')
+    # except:
+    #     work = ''
     try:
-        work = soup.find('span', class_='work-types--title').text.replace('\n',' ').replace(',','').replace('\t','').replace('\r','').replace('"','').replace('\\U','').replace(';','').replace('  ',' ')
+        description = soup.find('div', class_ = 'profile-user-description profile-user-work-types js-text-toggle-l2 text-toggle-l2 text-toggle-12')#.text.split(':')
+        description = str(description)
+        description_list = description.split('<span')
+        print(description_list)
+        for j in range(len(description_list)):
+            description_list[j] = BeautifulSoup(description_list[j], 'lxml').text.replace('\n', ' ').replace('\\U', '').replace(
+                ';', '').replace('"', '').replace(',', '').replace('\t', '').replace('  ', ' ')
+        des = description_list[1].split('>')
+        work = des[1].replace('\n','').replace('\r','')
+        description = description_list[0].replace('\n','').replace('\r','')
     except:
-        work = 'Null'
-    try:
-        description = soup.find('div', class_ = 'profile-user-description profile-user-work-types js-text-toggle-l2 text-toggle-l2 text-toggle-12').text.split(':')
-        description = description[0].replace('\n',' ').replace(',','').replace('\t','').replace('\r','').replace('"','').replace('\\U','').replace(';','').replace('  ',' ')
-    except:
-        description = 'Null'
+        description = ''
+        work = ''
     id_author_str = str(id_author)
     data_author = {'id' : id_author_str,
                    'name' : name,
-                   'info' : info,
+                   'inf_loc' : inf_loc,
+                   'inf_time': inf_time,
+                   'inf_shop': inf_shop,
+                   'inf_works': inf_works,
                    'description' : description,
                    'work' : work,
                    'url' : url}
@@ -191,8 +219,8 @@ def get_item_data(html):
         try:
             photos = item_soup.find_all('a', class_ = 'photo-switcher__largephoto')
         except:
-            photos = 'Null'
-        if photos != 'Null':
+            photos = ''
+        if photos != '':
             index = 0
             for photo in photos:
                 ph_url = photo.get('href')
@@ -202,80 +230,134 @@ def get_item_data(html):
                 except Exception as er:
                     print(er)
                     continue
-        title = str(item_soup.find('h1', class_='item-header js-translate-item-name').text.replace('\n','').replace(',','').replace('\t','').replace('\r','').replace('"','').replace('\\U','').replace(';',''))
+        title = str(item_soup.find('h1', class_='item-header js-translate-item-name').text.replace('\n','').replace(
+            ',','').replace('\t','').replace('\r','').replace('"','').replace('\\U','').replace(';',''))
         try:
-            price = str(item_soup.find('span', class_='price').text.split('&')[0].replace('\n','').replace(',','').replace('\t','').replace('\r','').replace('"','').replace('\\U','').replace(';','')) #+  item_soup.find('span', class_='cr js-stat-main-items-money').text
+            price = str(item_soup.find('span', class_='price').text.split('&')[0].replace('\n','').replace(
+                ',','').replace('\t','').replace('\r','').replace('"','').replace('\\U','').replace(';',''))
         except:
-            price ='Null'
+            price =''
         try:
-            description = str(item_soup.find('span', class_='js-translate-item-description').text.replace('\n','').replace(',','').replace('\t','').replace('\r','').replace('"','').replace('\\U','').replace(';',''))
+            description = str(item_soup.find('span', class_='js-translate-item-description').text.replace(
+                '\n','').replace(',','').replace('\t','').replace('\r','').replace('"','').replace('\\U','').replace(';',''))
         except:
-            description='Null'
+            description=''
         try:
-            recomend = str(item_soup.find('div', class_='block__content js-translate-item-itemcare').text.replace('\n','').replace(',','').replace('\t','').replace('\r','').replace('"','').replace('\\U','').replace(';',''))
+            recomend = str(item_soup.find('div', class_='block__content js-translate-item-itemcare').text.replace(
+                '\n','').replace(',','').replace('\t','').replace('\r','').replace('"','').replace('\\U','').replace(';',''))
         except:
-            recomend = 'Null'
+            recomend = ''
         try:
-            return_ = str(item_soup.find('div', class_='block__content js-block-return-and-exchange').text.replace('\n','').replace(',','').replace('\t','').replace('\r','').replace('"','').replace('\\U','').replace(';',''))
+            return_ = str(item_soup.find('div', class_='block__content js-block-return-and-exchange').text.replace(
+                '\n','').replace(',','').replace('\t','').replace('\r','').replace('"','').replace('\\U','').replace(';',''))
         except:
-            return_ = str('Null')
+            return_ = str('')
         try:
-            author = str(item_soup.find('a',class_='master__name').text.replace('\n','').replace(',','').replace('\t','').replace('\r','').replace('"','').replace('\\U','').replace(';',''))
+            author = str(item_soup.find('a',class_='master__name').text.replace('\n','').replace(',','').replace(
+                '\t','').replace('\r','').replace('"','').replace('\\U','').replace(';',''))
         except:
-            author = 'Null'
+            author = ''
         try:
             author_url = mainpage + item_soup.find('a',class_='master__name').get('href') + '/profile'
         except:
-            author_url = 'Null'
-        if author_url != 'Null':
+            author_url = ''
+        if author_url != '':
             get_author_data(author_url)
         try:
             infos = item_soup.find_all('li', class_='item-info__item')
         except:
-            infos = 'Null'
-        if infos != 'Null':
-            info = ''
+            infos = ''# info: form [time] materials size
+        if infos != '':
+            info = []
+            j = 0
             for inf in infos:
-                info = info + inf.text.replace('\n','').replace(',','').replace('\t','').replace('\r','').replace('"','').replace('\\U','').replace(';','')
+                info.append(inf.text.replace('\n','').replace(',','').replace('\t','').replace('\r','').replace(
+                    '"','').replace('\\U','').replace(';',''))
+                j = j+1
+            inf_form = info[0]
+            if j == 4:
+                inf_time = info[1]
+                inf_mat=info[2]
+                inf_size=info[3]
+            elif j==3:
+                inf_time = ''
+                inf_mat = info[1]
+                inf_size = info[2]
+            elif j == 2:
+                inf_time = ''
+                inf_mat = info[1]
+                inf_size = ''
         else:
-            info = 'Null'
+            inf_form = ''
+            inf_time = ''
+            inf_mat = ''
+            inf_size = ''
         try:
-            delivery = item_soup.find('div', class_='item-page-desc-block-text-delivery').text.replace('\n',' ').replace(',','').replace('\t','').replace('\r','').replace('"','').replace('\\U','').replace(';','').replace('  ',' ')
-        except:
-            delivery = 'Null'
+            delivery = item_soup.find('div', class_='item-page-desc-block-text-delivery')
+            #print(type(delivery))
+            delivery = str(delivery)
+            #print(type(delivery))
+            delivery_list = delivery.split('<strong>')
+            delivery = ''
+            for j in range(len(delivery_list)):
+                delivery_list[j] = BeautifulSoup(delivery_list[j], 'lxml').text.replace('\n',' ').replace(
+                    '\\U','').replace(';','').replace('"','').replace(',','').replace('\t','').replace('  ',' ')
+                #print(delivery_list[j])
+                delivery = delivery + '\t' + delivery_list[j]
+            delivery = delivery.replace('\t\t', ' ').replace('\n','').replace('\r','')
+            #print(delivery)
+        except Exception as er:
+            #print(er)
+            delivery = ''
         try:
-            pay = item_soup.find('div', class_ ='payment-main-box').text.replace('\n',' ').replace(',','').replace('\t','').replace('\r','').replace('"','').replace('\\U','').replace(';','').replace('  ',' ')
+            pay = item_soup.find('div', class_ ='payment-main-box').text.replace(',','').replace('\r','').replace(
+                '\n','\t').replace('"','').replace('\\U','').replace(';','').replace('\t\t',' ').replace('\n','')
+            #print(pay)
         except:
-            pay = 'Null'
+            pay = ''
         try:
-            keywords = item_soup.find('ul', class_='tag-list').text.replace('\n',' ').replace(',','').replace('\t','').replace('\r','').replace('"','').replace('\\U','').replace(';','').replace('  ',' ')
+            keywords = item_soup.find('ul', class_='tag-list').text.replace('\n',' ').replace(',','').replace(
+                '\t','').replace('\r','').replace('"','').replace('\\U','').replace(';','').replace('  ',' ')
         except:
-            keywords = 'Null'
+            keywords = ''
         id_item_str = str(id_item)
         try:
             comments = item_soup.find_all('div', class_='master-reviews__feedback')
             names = item_soup.find_all('span',itemprop='name') # names[3] = name first user
+            dates = item_soup.find_all('span', class_='master-reviews__date')
         except:
-            comments = 'Null'
-            names ='Null'
-        if comments != 'Null' and names !='Null':
+            comments = ''
+            names =''
+            dates = ''
+        if comments != '' and names !='' and dates != '':
             j=3
             for comment in comments:
-                comment= comment.text.replace('\n','').replace(',','').replace('\t','').replace('\r','').replace('"','').replace('\\U','').replace(';','')
                 try:
-                    name = names[j].text.replace('\n', '').replace(',', '').replace('\t', '').replace('\r', '').replace('"', '').replace('\\U', '').replace(';', '')
+                    comment= comment.text.replace('\n','').replace(',','').replace('\t','').replace('\r','').replace(
+                        '"','').replace('\\U','').replace(';','')
+                except:
+                    comment = ''
+                try:
+                    name = names[j].text.replace('\n', '').replace(',', '').replace('\t', '').replace('\r', '').replace(
+                        '"', '').replace('\\U', '').replace(';', '')
                 except IndexError:
-                    name = 'Null'
+                    name = ''
+                try:
+                    date = dates[j-3].text.replace('\n','').replace(',','').replace('\t','').replace('\r','').replace(
+                        '"','').replace('\\U','').replace(';','')
+                except:
+                    date = ''
                 j = j + 1
                 data_coment = {'id' : id_item_str,
                                'title': title,
                                'name' : name,
+                               'date' : date,
                                'comment' : comment}
                 write_comment(data_coment)
         try:
             path = item_soup.find('a', class_='breadcrumbs__link').text
         except:
-            path = 'Null'
+            path = ''
         path = path + '>' + names[0].text + '>' + names[1].text + '>' + names[2].text
         id_item_str = str(id_item)
         item_url_str = str(item_url)
@@ -283,7 +365,10 @@ def get_item_data(html):
                 'path': path,
                 'title': title,
                 'price': price,
-                'info': info,
+                'inf_form': inf_form,
+                'inf_time': inf_time,
+                'inf_mat': inf_mat,
+                'inf_size': inf_size,
                 'description': description,
                 'author' : author,
                 'author_url' : author_url,
@@ -305,7 +390,7 @@ def main():
     total_pages = get_total_pages(get_html(base_url).text)
 
     for i in range (0, total_pages + 40, 40): #to all pages
-    #for i in range(0, 40, 40): #for test
+    # for i in range(0, 40, 40): #for test
         url_gen = base_url + str(i)
         try:
             html = get_html(url_gen).text
