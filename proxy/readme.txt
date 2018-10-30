@@ -1,0 +1,1 @@
+Run this 2 scripts on Linux/OS X, NOT Windows.

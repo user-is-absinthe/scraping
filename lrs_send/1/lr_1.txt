@@ -1,0 +1,188 @@
+ЛР 1.
+
+1.
+	---
+
+2.
+	history - последние 30 команд;
+	history -c - очистить историю;
+
+3.
+	имя команды [аргументы] [параметры] [метасимволы]
+
+4.
+	g++ -std=c++11 -o test ./test.cpp
+	g++ - запуск интерпретатора
+	-std=c++11 - используем с++ (-std=standard)
+	-о test - outfile test
+	./test.cpp - выполнить test.cpp
+	test.cpp = {
+		/*
+		 * Это многострочный комментарий.
+		 * Наша программа ничего не делает.
+		*/
+		int main()
+		{
+		  return 0; // Возвратим ОС "код результата работы".
+		}
+
+	}
+	Можно не использовать:
+		./test.cpp - запуск полученного файла;
+	Можно добавить:
+		-ansi - кодировка.
+
+5.
+	./
+
+6.
+	---
+
+7.
+	cal = cal, ncal — displays a calendar and the date of Easter
+	cat = cat - concatenate files and print on the standard output
+	Нет справочной страницы для cd
+	date - print or set the system date and time
+	echo - display a line of text
+	free - Display amount of free and used memory in the system
+	ln - make links between files
+	ls - list directory contents
+	mkdir - make directories
+	ps - report a snapshot of the current processes
+	pwd - print name of current/working directory
+	rm - remove files or directories
+	top - display Linux processes
+	wc - print newline, word, and byte counts for each file
+	
+	ubuntuser@ubuntu:~$ ls -lh
+	итого 56K
+	drwxr-xr-x 3 ubuntuser ubuntuser 4,0K сен 28 21:35 Desktop
+	drwxr-xr-x 2 ubuntuser ubuntuser 4,0K дек  8  2017 Documents
+	drwxr-xr-x 2 ubuntuser ubuntuser 4,0K дек  8  2017 Downloads
+	drwxr-xr-x 2 ubuntuser ubuntuser 4,0K дек  8  2017 Music
+	drwxr-xr-x 2 ubuntuser ubuntuser 4,0K дек  8  2017 Pictures
+	drwxr-xr-x 2 ubuntuser ubuntuser 4,0K дек  8  2017 Public
+	drwxrwxr-x 6 ubuntuser ubuntuser 4,0K сен 28 05:21 PycharmProjects
+	drwxr-xr-x 3 ubuntuser ubuntuser 4,0K сен 28 21:42 snap
+	drwxr-xr-x 2 ubuntuser ubuntuser 4,0K дек  8  2017 Templates
+	-rwxrwxr-x 1 ubuntuser ubuntuser 8,4K сен 28 21:47 test
+	-rw-rw-r-- 1 ubuntuser ubuntuser  232 сен 28 21:47 test.cpp
+	drwxr-xr-x 2 ubuntuser ubuntuser 4,0K дек  8  2017 Videos
+	ubuntuser@ubuntu:~$ pwd
+	/home/ubuntuser
+
+8.
+	ubuntuser@ubuntu:~$ cal 2000 -m 01
+	    Январь 2000       
+	Вс Пн Вт Ср Чт Пт Сб  
+		           1  
+	 2  3  4  5  6  7  8  
+	 9 10 11 12 13 14 15  
+	16 17 18 19 20 21 22  
+	23 24 25 26 27 28 29  
+	30 31          
+
+9.
+	ubuntuser@ubuntu:~$ cat -b test.cpp 
+	     1	/*
+	     2	 * Это многострочный комментарий.
+	     3	 * Наша программа ничего не делает.
+	     4	 */
+	     5	int main()
+	     6	{
+	     7	  return 0; // Возвратим ОС "код результата работы".
+	     8	}
+
+10.
+	ubuntuser@ubuntu:~$ date
+	Пт сен 28 22:05:39 MSK 2018
+
+11.
+	ubuntuser@ubuntu:~$ cd //
+	ubuntuser@ubuntu://$ cd home
+	ubuntuser@ubuntu://home$ cd ..
+	ubuntuser@ubuntu://$ cd home
+	ubuntuser@ubuntu://home$ 
+
+12.
+	shell - название
+	$shell - возвращает shell (?)
+	$SHELL - путь
+
+13.
+	df -h
+	Файл.система   Размер Использовано  Дост Использовано% Cмонтировано в
+	udev             1,9G            0  1,9G            0% /dev
+	tmpfs            394M         6,3M  387M            2% /run
+	/dev/sda1         16G          14G  1,7G           89% /
+	tmpfs            2,0G         464K  2,0G            1% /dev/shm
+	tmpfs            5,0M         4,0K  5,0M            1% /run/lock
+	tmpfs            2,0G            0  2,0G            0% /sys/fs/cgroup
+	tmpfs            394M          96K  394M            1% /run/user/1000
+	/dev/loop0        88M          88M     0          100% /snap/core/5328
+	/dev/loop1       145M         145M     0          100% /snap/notepadqq/855
+
+
+14.
+	ubuntuser@ubuntu:~$ pwd
+	/home/ubuntuser
+
+15.
+	ubuntuser@ubuntu:~$ cd //
+	ubuntuser@ubuntu://$ cd home
+	ubuntuser@ubuntu://home$ ls -lhi
+	итого 4,0K
+	924449 drwxr-xr-x 24 ubuntuser ubuntuser 4,0K сен 28 21:47 ubuntuser
+
+16.
+	ubuntuser@ubuntu://home$ ps
+	   PID TTY          TIME CMD
+	  2111 pts/17   00:00:00 bash
+	  7244 pts/17   00:00:00 ps
+
+17.
+	who - имя пользователя, дата открытия терминала
+	ps - список запущенных процессов в терминале
+
+18.
+	cd ~
+
+19.
+	tux@slitaz:~$ mkdir inform
+	tux@slitaz:~$ cd inform/
+	tux@slitaz:~/inform$ cd ..
+	tux@slitaz:~$ mkdir inform/lab1
+	tux@slitaz:~$ mkdir inform/lab1/catalog1
+	tux@slitaz:~$ mkdir inform/lab1/catalog2
+	tux@slitaz:~$ touch inform/lab1/file1
+	tux@slitaz:~$ cd inform/lab1/catalog2
+	tux@slitaz:~/inform/lab1/catalog2$ touch file3
+	tux@slitaz:~/inform/lab1/catalog2$ touch file4
+	tux@slitaz:~/inform/lab1/catalog2$ mkdir catalog3
+	tux@slitaz:~/inform/lab1/catalog2$ cd catalog3/
+	tux@slitaz:~/inform/lab1/catalog2/catalog3$ ln /home/tux/inform/lab1/file1 file5
+	tux@slitaz:~/inform/lab1/catalog2/catalog3$ cd ..
+	tux@slitaz:~/inform/lab1/catalog2$ cd ..
+	tux@slitaz:~/inform/lab1$ ln -s catalog2/catalog3/file5 s_link
+	tux@slitaz:~/inform/lab1$ 
+
+20.
+	img2.png
+
+21.
+	tux@slitaz:~/inform/lab1$ cd ~
+	tux@slitaz:~$ ls inform/lab1/catalog2
+	catalog3  file3     file4
+
+22.
+	tux@slitaz:~$ rm inform/lab1/catalog2/file4
+
+23.
+	tux@slitaz:~$ wc test 
+        9        19       272 test
+
+24.
+	Display Linux tasks
+
+25.
+	Exit from terminal.

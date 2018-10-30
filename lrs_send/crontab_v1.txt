@@ -1,0 +1,15 @@
+http://qaru.site/questions/316919/append-date-to-filename-in-linux
+
+user1@ubuntu:~$ mkdir qqqqq
+user1@ubuntu:~$ cd qqqqq/
+user1@ubuntu:~/qqqqq$ nano script.sh
+user1@ubuntu:~/qqqqq$ cat script.sh 
+#!/bin/bash
+echo 'Im a file.' > "$(date +"%y-%m-%d %T")".txt 
+user1@ubuntu:~/qqqqq$ sudo chmod +x script.sh 
+user1@ubuntu:~/qqqqq$ ./script.sh 
+user1@ubuntu:~/qqqqq$ ls
+1  18-10-30 02:00:50.txt  script.sh
+mv script.sh script
+crontab -e
+* * * * * /home/user1/qqqqq/script
