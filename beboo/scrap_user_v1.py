@@ -49,10 +49,7 @@ def log_error(e):
 def load_proxies(input_file):
     with open(input_file, "r") as Fi:
         proxies = set(Fi.readlines())
-
     proxies = list(proxies)
-    for proxy in proxies:
-        pass
     return proxies
 
 

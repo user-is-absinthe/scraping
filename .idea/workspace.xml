@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="80abec9e-5f51-4993-9960-0bd9bbae74fb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/masters_town/scrap.py" afterPath="$PROJECT_DIR$/masters_town/scrap.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proxies_good.txt" afterPath="$PROJECT_DIR$/proxies_good.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/beboo/scrap_user_v1.py" afterPath="$PROJECT_DIR$/beboo/scrap_user_v1.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/masters_town/data/author_list.csv" afterPath="$PROJECT_DIR$/masters_town/data/author_list.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/masters_town/data/comments.csv" afterPath="$PROJECT_DIR$/masters_town/data/comments.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/masters_town/data/items_list.csv" afterPath="$PROJECT_DIR$/masters_town/data/items_list.csv" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="scrap_user_v1.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="scrap_user_v1.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/beboo/scrap_user_v1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="54" column="12" lean-forward="false" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
+            <state relative-caret-position="340">
+              <caret line="35" column="35" lean-forward="false" selection-start-line="35" selection-start-column="35" selection-end-line="36" selection-end-column="40" />
               <folding>
                 <element signature="e#2#32#0" expanded="true" />
               </folding>
@@ -42,10 +44,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scrap.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="scrap.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/masters_town/scrap.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
+            <state relative-caret-position="413">
               <caret line="388" column="29" lean-forward="false" selection-start-line="388" selection-start-column="29" selection-end-line="388" selection-end-column="29" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
@@ -140,8 +142,8 @@
         <option value="$PROJECT_DIR$/beboo/help.txt" />
         <option value="$PROJECT_DIR$/beboo/scrap_beboo_v1.py" />
         <option value="$PROJECT_DIR$/manga/nhentai_v2.py" />
-        <option value="$PROJECT_DIR$/beboo/scrap_user_v1.py" />
         <option value="$PROJECT_DIR$/masters_town/scrap.py" />
+        <option value="$PROJECT_DIR$/beboo/scrap_user_v1.py" />
       </list>
     </option>
   </component>
@@ -183,7 +185,7 @@
             <path>
               <item name="scraping" type="b2602c69:ProjectViewProjectNode" />
               <item name="scraping" type="462c0819:PsiDirectoryNode" />
-              <item name="masters_town" type="462c0819:PsiDirectoryNode" />
+              <item name="beboo" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -481,19 +483,26 @@
       <option name="project" value="LOCAL" />
       <updated>1540787168653</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="and lr-s">
+      <created>1540861781566</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1540861781566</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11886994" sideWeight="0.49565217" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11886994" sideWeight="0.49565217" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.510661" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3923913" sideWeight="0.510661" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33152175" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3923913" sideWeight="0.48933902" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3923913" sideWeight="0.48933902" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30869564" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11673774" sideWeight="0.5043478" order="2" side_tool="true" content_ui="tabs" />
@@ -528,7 +537,8 @@
     <MESSAGE value="minor fixes" />
     <MESSAGE value="new alien`s code" />
     <MESSAGE value="and now... new alien`s code too" />
-    <option name="LAST_COMMIT_MESSAGE" value="and now... new alien`s code too" />
+    <MESSAGE value="and lr-s" />
+    <option name="LAST_COMMIT_MESSAGE" value="and lr-s" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -540,7 +550,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/beboo/scrap_user_v1.py</url>
-          <line>67</line>
+          <line>64</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -552,11 +562,6 @@
           <url>file://$PROJECT_DIR$/manga/nhentai_v2.py</url>
           <line>60</line>
           <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/beboo/scrap_user_v1.py</url>
-          <line>54</line>
-          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="15" />
@@ -837,22 +842,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/beboo/scrap_user_v1.py">
+    <entry file="file://$PROJECT_DIR$/masters_town/scrap.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="54" column="12" lean-forward="false" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
+        <state relative-caret-position="413">
+          <caret line="388" column="29" lean-forward="false" selection-start-line="388" selection-start-column="29" selection-end-line="388" selection-end-column="29" />
           <folding>
-            <element signature="e#2#32#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/masters_town/scrap.py">
+    <entry file="file://$PROJECT_DIR$/beboo/scrap_user_v1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="388" column="29" lean-forward="false" selection-start-line="388" selection-start-column="29" selection-end-line="388" selection-end-column="29" />
+        <state relative-caret-position="340">
+          <caret line="35" column="35" lean-forward="false" selection-start-line="35" selection-start-column="35" selection-end-line="36" selection-end-column="40" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#2#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
