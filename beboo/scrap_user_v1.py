@@ -1,49 +1,8 @@
-
+import sys
 
 from contextlib import closing
-from requests import get
-from requests.exceptions import RequestException
-
-
-def simple_get(url):
-    """
-    Attempts to get the content at `url` by making an HTTP GET request.
-    If the content-type of response is some kind of HTML/XML, return the
-    text content, otherwise return None.
-
-    Попытка получить контент на `url`, выполнив HTTP-запрос GET.
-    Если тип ответа контента является своего рода HTML / XML, верните
-    текстовое содержимое, иначе верните «Нет».
-    """
-    try:
-        with closing(get(url, stream=True)) as resp:
-            if is_good_response(resp):
-                return resp.content
-            else:
-                return None
-
-    except RequestException as e:
-        # log_error('Error during requests to {0} : {1}'.format(url, str(e)))
-        log_error('Ошибка во время запроса к {0} : {1}'.format(url, str(e)))
-        return None
-
-
-def is_good_response(resp):
-    """
-    Возвращает True, если ответ похож на HTML, False в противном случае.
-    """
-    content_type = resp.headers['Content-Type'].lower()
-    return (resp.status_code == 200
-            and content_type is not None
-            and content_type.find('html') > -1)
-
-
-def log_error(e):
-    """
-    Всегда полезно записывать ошибки.
-    Эта функция просто печатает их.
-    """
-    print(e)
+import requests
+import user_agent
 
 
 def load_proxies(input_file):
@@ -53,13 +12,40 @@ def load_proxies(input_file):
     return proxies
 
 
-def login():
+def login(email, password, ip):
+    proxy_to_login = {"http": ip}
+    head_to_login = {'User-Agent': user_agent.generate_user_agent()}
+    login_content = requests.session()
+    answered = login_content.get(
+        url='http://beboo.ru/auth',
+        proxies=proxy_to_login,
+        headers=head_to_login
+    )
+    answered_1 = login_content.post(
+        url='http://beboo.ru/auth',
+        proxies=proxy_to_login,
+        headers=head_to_login,
+        data={
+            'email': 'kozlovsky.andryu@ya.ru',
+            'password': '10bFYWH4p5'
+        }
+    )
     pass
 
 
+def load_country_code(path):
+    with open(path, 'r') as file:
+        country_code = list(file.readline())
+    return country_code
+
+
 def main():
-    all_country = open('all_codes_country.txt', 'r')
-    all_proxy = load_proxies(input_file='proxies_good.txt')
+    try:
+        all_country = load_country_code('all_codes_country.txt')  # list
+        all_proxy = load_proxies('proxies_good.txt')  # list
+    except FileNotFoundError:
+        print('Proxy or region file not found.')
+        sys.exit(10)
 
     for country in all_country:
         to_search = 'http://beboo.ru/search?iaS=0&status=all&country={}&region=all&town=all&lookFor=0&reason=0&endAge=80&startAge=18&aS%5B25%5D%5B%5D=0&aS%5B26%5D%5B%5D=0&aS%5B28%5D%5B%5D=0&aS%5B29%5D%5B%5D=0&aS%5B27%5D%5B%5D=0&aS%5B32%5D%5B%5D=0&aS%5B30%5D%5B%5D=0&aS%5B31%5D%5B%5D=0&height=0&height=0&aS%5B19%5D%5B%5D=0&aS%5B23%5D%5B%5D=0&aS%5B24%5D%5B%5D=0&aS%5B20%5D%5B%5D=0&aS%5B21%5D%5B%5D=0&aS%5B22%5D%5B%5D=0&aS%5B33%5D%5B%5D=0&aS%5B35%5D%5B%5D=0&aS%5B34%5D%5B%5D=0'.format(country)
@@ -69,7 +55,7 @@ def main():
             counter_page += 1
             print('{} search page, code {}.'.format(counter_page, country))
 
-            page = simple_get(to_search)
+            # page = simple_get(to_search)
 
 
 
