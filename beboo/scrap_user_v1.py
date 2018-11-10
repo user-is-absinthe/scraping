@@ -48,7 +48,7 @@ def main():
         sys.exit(10)
 
     for country in all_country:
-        to_search = 'http://beboo.ru/search?iaS=0&status=all&country={}&region=all&town=all&lookFor=0&reason=0&endAge=80&startAge=18&aS%5B25%5D%5B%5D=0&aS%5B26%5D%5B%5D=0&aS%5B28%5D%5B%5D=0&aS%5B29%5D%5B%5D=0&aS%5B27%5D%5B%5D=0&aS%5B32%5D%5B%5D=0&aS%5B30%5D%5B%5D=0&aS%5B31%5D%5B%5D=0&height=0&height=0&aS%5B19%5D%5B%5D=0&aS%5B23%5D%5B%5D=0&aS%5B24%5D%5B%5D=0&aS%5B20%5D%5B%5D=0&aS%5B21%5D%5B%5D=0&aS%5B22%5D%5B%5D=0&aS%5B33%5D%5B%5D=0&aS%5B35%5D%5B%5D=0&aS%5B34%5D%5B%5D=0'.format(country)
+        to_search = 'http://beboo.ru/search?iaS=0&status=all&country={}&region=all&town=all&lookFor=0&reason=0&endAge=80&startAge=18'.format(country)
         print('Now we work with {} code.'.format(country))
         counter_page = 0
         while True:

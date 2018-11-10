@@ -10,3 +10,6 @@ http://beboo.ru/search?iaS=0&status=all&country=RU&region=all&town=all&lookFor=0
 
 То же, короче:
 http://beboo.ru/search?iaS=0&status=all&country=RU&region=all&town=all&lookFor=0
+
+
+http://beboo.ru/search?iaS=0&status=all&country=RU&region=all&town=all&lookFor=0&reason=0&endAge=80&startAge=18
