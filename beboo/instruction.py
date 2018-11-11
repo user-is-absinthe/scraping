@@ -61,7 +61,7 @@ photos = driver.find_elements_by_class_name('public_photos')
 photos[0].click()
 photo = driver.find_element_by_class_name('ppp-img ')
 link_to_photo = photo.get_attribute('src')
-link_to_photo = photo.get_attribute('src').replace('800x800', '1200x1200')
+link_to_photo_big = photo.get_attribute('src').replace('800x800', '1200x1200')
 # TODO: open new tab & work with new tab
 # open new tab to test big img
 driver.find_element_by_tag_name('body').send_keys(Keys.COMMAND + 't') 
