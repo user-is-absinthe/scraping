@@ -1,9 +1,13 @@
+
+
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.common import exceptions as selenium_exception
+import requests
 
 
 driver = webdriver.Chrome('C:\\Users\Worker\Pycharm\Pycharm_project\scraping\\beboo\chromedriver')  # Optional argument, if not specified will search path.
+driver = webdriver.Safari()
 
 driver.get('http://beboo.ru/auth')
 elem = driver.find_element_by_name('email')
@@ -14,11 +18,20 @@ elem.send_keys(Keys.RETURN)
 
 driver.get('http://beboo.ru/search?iaS=0&status=all&country=RU&region=all&town=all&lookFor=0')
 users_on_page = driver.find_elements_by_class_name('user-link')
+# TODO: try-except block
 next_page = driver.find_element_by_link_text('Следующие >')
 
 users_on_page[0].click()
+
+user_link = users_on_page[0].get_attribute('href')
 name = driver.find_element_by_class_name('profile-nick-name').text.partition('\n')[0]
-# name = name.text.partition('\n')[0]
+'''
+    name = name.replace('Cейчас на сайте!', '')
+    # name = name.text.partition('\n')[0]
+    Только что былa на сайте
+    Только что был на сайте
+    
+'''
 sex = driver.find_element_by_id('val_age').text # driver.find_elements_by_tag_name('dd')[0].text
 type_of_account = driver.find_elements_by_tag_name('dd')[1].text.lower()
 age = driver.find_elements_by_tag_name('dd')[2].text
@@ -64,7 +77,15 @@ link_to_photo = photo.get_attribute('src')
 link_to_photo_big = photo.get_attribute('src').replace('800x800', '1200x1200')
 # TODO: open new tab & work with new tab
 # open new tab to test big img
-driver.find_element_by_tag_name('body').send_keys(Keys.COMMAND + 't') 
+# driver.find_element_by_tag_name('body').send_keys(Keys.COMMAND + 't')
+
+to_save = requests.get(link_to_photo_big)
+photo_name = 'beboo/1_1.jpg' # user_id + photo number
+out = open(photo_name, "wb")
+out.write(to_save.content)
+out.close()
+
+
 
 
 
