@@ -7,7 +7,7 @@ import requests
 
 
 driver = webdriver.Chrome('C:\\Users\Worker\Pycharm\Pycharm_project\scraping\\beboo\chromedriver')  # Optional argument, if not specified will search path.
-driver = webdriver.Safari()
+# driver = webdriver.Safari()
 
 driver.get('http://beboo.ru/auth')
 elem = driver.find_element_by_name('email')
@@ -17,13 +17,13 @@ elem1.send_keys("10bFYWH4p5")
 elem.send_keys(Keys.RETURN)
 
 driver.get('http://beboo.ru/search?iaS=0&status=all&country=RU&region=all&town=all&lookFor=0')
-users_on_page = driver.find_elements_by_class_name('user-link')
+selenium_users_on_page = driver.find_elements_by_class_name('user-link')
 # TODO: try-except block
 next_page = driver.find_element_by_link_text('Следующие >')
 
-users_on_page[0].click()
+user_link = selenium_users_on_page[0].get_attribute('href')
 
-user_link = users_on_page[0].get_attribute('href')
+selenium_users_on_page[0].click()
 name = driver.find_element_by_class_name('profile-nick-name').text.partition('\n')[0]
 '''
     name = name.replace('Cейчас на сайте!', '')

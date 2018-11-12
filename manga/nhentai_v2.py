@@ -75,7 +75,7 @@ def manga_saver(first_url, proxy_path=''):
 
 
 if __name__ == '__main__':
-    url_first = 'https://i.nhentai.net/galleries/1289135/1.jpg'
+    url_first = 'https://i.nhentai.net/galleries/0000/1.jpg'
     path_to_proxy = 'proxies_good.txt'
     # use_proxy = 1
     manga_saver(url_first, path_to_proxy)
