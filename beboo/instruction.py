@@ -85,12 +85,6 @@ out = open(photo_name, "wb")
 out.write(to_save.content)
 out.close()
 
-
-
-
-
-
-
 try:
     piercing = driver.find_element_by_id('val_21').text
 except selenium_exception.NoSuchElementException:
