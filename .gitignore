@@ -1,2 +1,8 @@
 .idea
 .DS_Store
+encodings.xml
+misc.xml
+modules.xml
+scraping.iml
+vcs.xml
+workspace.xml
