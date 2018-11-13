@@ -14,7 +14,7 @@ def load_proxies(input_file):
 
 def load_country_code(path):
     with open(path, 'r') as file:
-        country_code = list(file.readline())
+        country_code = file.readlines()
     return country_code
 
 

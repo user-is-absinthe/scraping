@@ -11,11 +11,11 @@ from selenium.common import exceptions as selenium_exception
 import requests
 
 
-path_to_users_links = 'beboo/data/users_links.csv'
-path_to_users_information = 'beboo/data/users.csv'
-path_to_photos_links = 'beboo/data/photos_links.csv'
-path_to_log = 'beboo/data/beboo.log'
-path_to_photos = 'beboo/data/photos'
+path_to_users_links = 'data/users_links.csv'
+path_to_users_information = 'data/users.csv'
+path_to_photos_links = 'data/photos_links.csv'
+path_to_log = 'data/beboo.log'
+path_to_photos = 'data/photos'
 
 path_to_country_code = 'all_codes_country.txt'
 
@@ -41,12 +41,15 @@ def auth(dr):
     elem1 = dr.find_element_by_name('password')
     elem1.send_keys("10bFYWH4p5")
     elem.send_keys(Keys.RETURN)
+    print('Authorization successful.')
+    to_log('Authorization successful.')
     return dr
 
 
 def load_country_code(path):
     with open(path, 'r') as file:
-        country_code = list(file.readline())
+        country_code = file.readlines()
+    country_code = [this.strip() for this in country_code]
     to_log('Country code loaded successful.')
     return country_code
 
@@ -91,8 +94,10 @@ def create_head():
 def users_on_page(dr):
     # users_links_set = set()
     page = 1
+    users_last_page = []
     global region_code, users_links
     while True:
+        users_this_page = []
         print('Work with {} region, {} page, already scrapped {} profiles.'.format(
             region_code, page, page * 15
         ))
@@ -102,15 +107,25 @@ def users_on_page(dr):
         selenium_users_on_page = dr.find_elements_by_class_name('user-link')
         for selenium_user in selenium_users_on_page:
             # users_links_set.add(selenium_user.get_attribute('href'))
-            users_links.append(selenium_user.get_attribute('href'))
-        time.sleep(random.uniform(0, 2))
-        try:
-            next_page = dr.find_element_by_link_text('Следующие >')
-            # time.sleep(random.uniform(0, 3))
-            next_page.click()
-            page += 1
-        except selenium_exception.NoSuchElementException:
+            # users_links.append(selenium_user.get_attribute('href'))
+            users_this_page.append(selenium_user.get_attribute('href'))
+        # time.sleep(random.uniform(2, 5))
+        if users_this_page == users_last_page:
             break
+        else:
+            page += 1
+            users_links.extend(users_this_page)
+            dr.get('http://beboo.ru/search?iaS=0&status=all&country={}&region=all&town=all&lookFor=0&page={}'.format(
+                region_code, page
+            ))
+            users_last_page = users_this_page.copy()
+        # try:
+        #     next_page = dr.find_element_by_link_text('Следующие >')
+        #     # time.sleep(random.uniform(0, 3))
+        #     next_page.click()
+        #     page += 1
+        # except selenium_exception.NoSuchElementException:
+        #     break
 
     # users_links = list(users_links_set)
     # user_id_links = []
@@ -151,7 +166,7 @@ def load_photos(dr):
     for i in range(len(photos)):
         photos_links.append(photos[i].get_attribute('href'))
     for number_link in range(len(photos_links)):
-        time.sleep(random.uniform(0, 3))
+        # time.sleep(random.uniform(2, 5))
         dr.get(photos_links[number_link])
         s_photo = dr.find_element_by_class_name('ppp-img ')
         link_to_photo = s_photo.get_attribute('src')
@@ -165,8 +180,8 @@ def save_photo(photo_link, number):
     to_save = requests.get(photo_big_link)
     if to_save.status_code == 404:
         to_save = requests.get(photo_link)
-    global u_id
-    photo_name = 'beboo/{}_{}.jpg'.format(u_id, number)  # user_id + photo number
+    global u_id, path_to_photos
+    photo_name = path_to_photos + '/{}_{}.jpg'.format(u_id, number)  # user_id + photo number
     out = open(photo_name, "wb")
     out.write(to_save.content)
     out.close()
@@ -248,7 +263,6 @@ def create_log():
 
 
 def main():
-    create_log()
     to_log('Start program.')
     # user_id = 0
     # global user_id
@@ -295,6 +309,7 @@ def main():
 
     print('Start scrapping user profiles.')
     to_log('Start scrapping user profiles.')
+    driver = auth(driver)
     global u_id
     for user_id in range(len(users_links)):
         u_id = user_id
@@ -311,8 +326,11 @@ def main():
 
 
 if __name__ == '__main__':
-    try:
-        main()
-    except Exception as error:
-        print(error)
-        to_log(error)
+    create_log()
+    main()
+    # try:
+    #     main()
+    # except Exception as error:
+    #     print(str(error))
+    #     to_log(str(error))
+    #     # sys.exit(1)
