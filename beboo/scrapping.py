@@ -201,7 +201,9 @@ def scr_user(dr, id_user, link_to_user):
         sex = find_by('id', 'val_age', dr)
         type_of_account = find_by('tag_1', 'dd', dr)
         age = find_by('tag_2', 'dd', dr)
-        country = region_code
+        # country = region_code
+        country = '1'  # сделать подстановку из словаря, ищем по строке
+        # driver.find_element_by_class_name('look_for').text и если совпадает со страной из списка, подставляем её
         city = find_by('tag_4', 'dd', dr)
         about = find_by('tag_6', 'p', dr)
         find = find_by('tag_7', 'p', dr)
