@@ -226,7 +226,7 @@ def main():
         if iter_filtering != REFILTERING_COUNT-1:
             # end iteration => reset all global lists, sets, counters
             RESULTS.clear()
-            #proxies = CURRENT_GOOD_PROXIES.copy()
+            # proxies = CURRENT_GOOD_PROXIES.copy()
             CURRENT_GOOD_PROXIES.clear()
             total_good = m.Value('i', 0)
             total_bad = m.Value('i', 0)
@@ -239,7 +239,7 @@ def main():
         pool.close()
         pool.join()
     # save chosen proxies to output file
-    #print(good_proxies)
+    #  print(good_proxies)
     result_list = [proxy for proxy in good_proxies.keys() if good_proxies[proxy] >= COUNT_CHANCE]
     with open(OUTPUT_FILE, 'w') as file_output:
         for proxy in result_list:

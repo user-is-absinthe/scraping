@@ -135,8 +135,6 @@ def users_on_page(dr):
     # write_csv(path_to_users_links, user_id_links)
     return 0
 
-    pass
-
 
 def find_by(param_name, param_text, dr):
     try:
