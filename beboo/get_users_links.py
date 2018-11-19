@@ -32,6 +32,7 @@ def get_links(first_page, country):
     driver = webdriver.Chrome(PATH_TO_DRIVER)
     driver.get(first_page)
 
+    # TODO: users_links_by_country - set!
     users_links_by_country = list()
 
     page = 1
