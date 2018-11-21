@@ -1,7 +1,7 @@
 import sys
-import random
+# import random
 import csv
-import time
+# import time
 from datetime import datetime
 
 
