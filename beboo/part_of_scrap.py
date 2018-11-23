@@ -169,7 +169,6 @@ def scr_user(dr, link_to_user, region_code):
         erogenous_zones = find_by('id', 'val_38', dr)  # эрогенные зоны
         fetishes = find_by('id', 'val_39', dr)  # фетиши
 
-        # TODO: save info
         global PATH_TO_USERS_INFORMATION
         my_csv.csv_line_writer(PATH_TO_USERS_INFORMATION, [
             id_user, link_to_user, name, sex, type_of_account, age, country, city, about, find, family, profit,

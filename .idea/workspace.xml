@@ -2,13 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80abec9e-5f51-4993-9960-0bd9bbae74fb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/threading_tests/test_1.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/chromedriver.exe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/alone_scrapping_test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/users_links_iv.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/users_links_test.csv" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/beboo/data/beboo.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/beboo/data/new_users.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/beboo/data/new_users_links.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/beboo/data/photos_links.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/beboo/data/users.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/beboo/data/users_100.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/beboo/data/users_links.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/beboo/data/users_links.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/beboo/data/users_links_100.csv" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geckodriver.log" afterPath="$PROJECT_DIR$/beboo/alone_scrapping.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/beboo/data/users_links_100.csv" afterPath="$PROJECT_DIR$/beboo/data/users_links_100.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/beboo/get_users_links.py" afterPath="$PROJECT_DIR$/beboo/get_users_links.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/beboo/part_of_scrap.py" afterPath="$PROJECT_DIR$/beboo/part_of_scrap.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/beboo/scrapping.py" afterPath="$PROJECT_DIR$/beboo/scrapping.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freeze.txt" afterPath="$PROJECT_DIR$/freeze.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/beboo/proxies_good.txt" afterPath="$PROJECT_DIR$/beboo/proxies_good.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proxies_good.txt" afterPath="$PROJECT_DIR$/proxies_good.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,12 +30,14 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/scraping$v_02_vk_easy.coverage" NAME="v_02_vk_easy Coverage Results" MODIFIED="1540334197558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/some_vk" />
+    <SUITE FILE_PATH="coverage/scraping$alone_scrapping_test.coverage" NAME="alone_scrapping_test Coverage Results" MODIFIED="1543000922221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/scraping$nhentai.coverage" NAME="nhentai Coverage Results" MODIFIED="1540339048364" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/manga" />
     <SUITE FILE_PATH="coverage/scraping$scrapping.coverage" NAME="scrapping Coverage Results" MODIFIED="1541995197809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/beboo" />
     <SUITE FILE_PATH="coverage/scraping$scrappy_v03.coverage" NAME="scrappy_v03 Coverage Results" MODIFIED="1536204690767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/scraping$instruction.coverage" NAME="instruction Coverage Results" MODIFIED="1541990378142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/beboo" />
     <SUITE FILE_PATH="coverage/scraping$srappy_v01.coverage" NAME="srappy_v01 Coverage Results" MODIFIED="1536187884728" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/scraping$part_of_scrap.coverage" NAME="part_of_scrap Coverage Results" MODIFIED="1542758775582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/beboo" />
+    <SUITE FILE_PATH="coverage/scraping$alone_scrapping.coverage" NAME="alone_scrapping Coverage Results" MODIFIED="1542922983387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/beboo" />
     <SUITE FILE_PATH="coverage/scraping$proxy_finder.coverage" NAME="proxy_finder Coverage Results" MODIFIED="1539641393486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/proxy/proxy_finder" />
     <SUITE FILE_PATH="coverage/scraping$test_1.coverage" NAME="test_1 Coverage Results" MODIFIED="1542762233058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/threading_tests" />
     <SUITE FILE_PATH="coverage/scraping$scrap_final.coverage" NAME="scrap_final Coverage Results" MODIFIED="1539631443690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/proxy" />
@@ -46,7 +59,7 @@
             <entry file="file://$PROJECT_DIR$/beboo/instruction.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="0">
-                  <caret line="18" column="92" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="92" />
+                  <caret line="25" column="26" lean-forward="false" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="33" />
                   <folding>
                     <element signature="e#2#32#0" expanded="true" />
                   </folding>
@@ -54,11 +67,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="get_users_links.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/beboo/get_users_links.py">
+          <file leaf-file-name="alone_scrapping_test.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/tests/alone_scrapping_test.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="688">
-                  <caret line="55" column="23" lean-forward="false" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="23" />
+                <state relative-caret-position="357">
+                  <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="120" selection-end-column="23" />
                   <folding>
                     <element signature="e#0#29#0" expanded="true" />
                   </folding>
@@ -66,38 +79,28 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="help.txt" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/beboo/help.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="18" column="37" lean-forward="false" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="users_links_100.csv" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/beboo/data/users_links_100.csv">
+          <file leaf-file-name="users_links_iv.csv" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/users_links_iv.csv">
               <provider selected="true" editor-type-id="csv-text-editor">
                 <state />
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="all_codes_country.txt" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/beboo/all_codes_country.txt">
+          <file leaf-file-name="users_links_test.csv" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/users_links_test.csv">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3604">
-                  <caret line="212" column="2" lean-forward="false" selection-start-line="212" selection-start-column="2" selection-end-line="212" selection-end-column="2" />
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="part_of_scrap.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="part_of_scrap.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/beboo/part_of_scrap.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="158">
-                  <caret line="201" column="52" lean-forward="true" selection-start-line="201" selection-start-column="52" selection-end-line="201" selection-end-column="52" />
+                <state relative-caret-position="3281">
+                  <caret line="200" column="52" lean-forward="false" selection-start-line="200" selection-start-column="52" selection-end-line="200" selection-end-column="52" />
                   <folding>
                     <element signature="e#0#22#0" expanded="true" />
                   </folding>
@@ -108,13 +111,25 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="test_1.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/threading_tests/test_1.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="561">
-                  <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+                  <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="alone_scrapping.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/beboo/alone_scrapping.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="4046">
+                  <caret line="238" column="48" lean-forward="false" selection-start-line="238" selection-start-column="48" selection-end-line="238" selection-end-column="48" />
+                  <folding>
+                    <element signature="e#0#29#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -122,8 +137,8 @@
           <file leaf-file-name="scrapping.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/beboo/scrapping.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="595">
-                  <caret line="272" column="79" lean-forward="true" selection-start-line="272" selection-start-column="8" selection-end-line="272" selection-end-column="79" />
+                <state relative-caret-position="310">
+                  <caret line="279" column="34" lean-forward="false" selection-start-line="279" selection-start-column="22" selection-end-line="279" selection-end-column="34" />
                   <folding>
                     <element signature="e#0#10#0" expanded="true" />
                   </folding>
@@ -131,23 +146,45 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="scrap_user_v3.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/beboo/scrap_user_v3.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-94">
+                  <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="11" selection-end-column="18" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="my_csv.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/beboo/my_csv.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="396">
+                <state relative-caret-position="476">
                   <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="proxy_checker.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="proxy_checker.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/proxy/proxy_checker v. 1.0.3/proxy_checker.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="689">
+                <state relative-caret-position="2805">
                   <caret line="177" column="22" lean-forward="false" selection-start-line="177" selection-start-column="4" selection-end-line="177" selection-end-column="22" />
                   <folding>
                     <element signature="e#24#45#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="part_of_scrap.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/beboo/part_of_scrap.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="600">
+                  <caret line="211" column="57" lean-forward="false" selection-start-line="211" selection-start-column="57" selection-end-line="211" selection-end-column="57" />
+                  <folding>
+                    <element signature="e#0#22#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -182,12 +219,24 @@
       <find>multiprocessing</find>
       <find>multiprocessing.context.Process</find>
       <find>results_collectors</find>
+      <find>return</find>
+      <find>to_return =</find>
+      <find>text</find>
+      <find>'data</find>
+      <find>head</find>
+      <find>184</find>
+      <find>prox</find>
     </findStrings>
     <replaceStrings>
       <replace>use_proxy</replace>
       <replace>multiprocessing.context</replace>
-      <replace>multiprocessing.context</replace>
       <replace>Process</replace>
+      <replace>USER_NAME</replace>
+      <replace>to_return</replace>
+      <replace>to_return =</replace>
+      <replace>return</replace>
+      <replace>get_attribute('textContent')</replace>
+      <replace>PATH_TO_DATA + '</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -196,10 +245,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/srappy_v01.py" />
-        <option value="$PROJECT_DIR$/scrappy_v01.py" />
-        <option value="$PROJECT_DIR$/scrappy_v02.py" />
-        <option value="$PROJECT_DIR$/tests/mathematicians.py" />
         <option value="$PROJECT_DIR$/tests/1.html" />
         <option value="$PROJECT_DIR$/tests/test_bs4.py" />
         <option value="$PROJECT_DIR$/tests/test_1.py" />
@@ -242,11 +287,15 @@
         <option value="$PROJECT_DIR$/proxy/proxy_checker v. 1.0.3/proxy_checker.py" />
         <option value="$PROJECT_DIR$/wadawdwad.csv" />
         <option value="$PROJECT_DIR$/tests/my_csv.py" />
-        <option value="$PROJECT_DIR$/beboo/scrapping.py" />
         <option value="$PROJECT_DIR$/threading_tests/multiprocessing.py" />
         <option value="$PROJECT_DIR$/beboo/get_users_links.py" />
         <option value="$PROJECT_DIR$/threading_tests/test_1.py" />
+        <option value="$PROJECT_DIR$/tests/data/test_users.csv" />
         <option value="$PROJECT_DIR$/beboo/part_of_scrap.py" />
+        <option value="$PROJECT_DIR$/tests/data/iv_users.csv" />
+        <option value="$PROJECT_DIR$/beboo/scrapping.py" />
+        <option value="$PROJECT_DIR$/tests/alone_scrapping_test.py" />
+        <option value="$PROJECT_DIR$/beboo/alone_scrapping.py" />
       </list>
     </option>
   </component>
@@ -257,10 +306,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="2873" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -278,8 +326,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -295,18 +341,14 @@
             <path>
               <item name="scraping" type="b2602c69:ProjectViewProjectNode" />
               <item name="scraping" type="462c0819:PsiDirectoryNode" />
-              <item name="beboo" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scraping" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scraping" type="462c0819:PsiDirectoryNode" />
-              <item name="threading_tests" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -324,16 +366,16 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Worker\Pycharm\Pycharm_project\scraping\beboo" />
-      <recent name="C:\Users\Worker\Pycharm\Pycharm_project\scraping\rulove" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Worker\Pycharm\Pycharm_project\scraping\tests" />
       <recent name="C:\Users\Worker\Pycharm\Pycharm_project\scraping\beboo" />
       <recent name="C:\Users\Worker\Pycharm\Pycharm_project\scraping\masters_town" />
       <recent name="C:\Users\Worker\Pycharm\Pycharm_project\scraping\manga" />
       <recent name="C:\Users\Worker\Pycharm\Pycharm_project\scraping\some_vk" />
-      <recent name="C:\Users\Worker\Pycharm\Pycharm_project\scraping\proxy\proxy_checker v. 1.0.3" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Worker\Pycharm\Pycharm_project\scraping\beboo" />
+      <recent name="C:\Users\Worker\Pycharm\Pycharm_project\scraping\rulove" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -348,7 +390,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test_1">
+  <component name="RunManager" selected="Python.alone_scrapping_test">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -490,7 +532,7 @@
       <option name="_new_target" value="&quot;&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
-    <configuration name="get_users_links" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="alone_scrapping" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -503,7 +545,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="scraping" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/beboo/get_users_links.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/beboo/alone_scrapping.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="alone_scrapping_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Worker\Pycharm\scrap_venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="scraping" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/alone_scrapping_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -522,24 +582,6 @@
       <module name="scraping" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="C:\Users\Worker\Pycharm\Pycharm_project\scraping\threading_tests\test_1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
-    <configuration name="my_csv" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\Worker\Pycharm\scrap_venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="scraping" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/my_csv.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -582,18 +624,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.part_of_scrap" />
-      <item index="1" class="java.lang.String" itemvalue="Python.my_csv" />
-      <item index="2" class="java.lang.String" itemvalue="Python.get_users_links" />
-      <item index="3" class="java.lang.String" itemvalue="Python.multiprocessing" />
-      <item index="4" class="java.lang.String" itemvalue="Python.test_1" />
+      <item index="1" class="java.lang.String" itemvalue="Python.multiprocessing" />
+      <item index="2" class="java.lang.String" itemvalue="Python.test_1" />
+      <item index="3" class="java.lang.String" itemvalue="Python.alone_scrapping" />
+      <item index="4" class="java.lang.String" itemvalue="Python.alone_scrapping_test" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.test_1" />
-        <item index="1" class="java.lang.String" itemvalue="Python.part_of_scrap" />
-        <item index="2" class="java.lang.String" itemvalue="Python.multiprocessing" />
-        <item index="3" class="java.lang.String" itemvalue="Python.get_users_links" />
-        <item index="4" class="java.lang.String" itemvalue="Python.my_csv" />
+        <item index="0" class="java.lang.String" itemvalue="Python.alone_scrapping_test" />
+        <item index="1" class="java.lang.String" itemvalue="Python.alone_scrapping" />
+        <item index="2" class="java.lang.String" itemvalue="Python.test_1" />
+        <item index="3" class="java.lang.String" itemvalue="Python.part_of_scrap" />
+        <item index="4" class="java.lang.String" itemvalue="Python.multiprocessing" />
       </list>
     </recent_temporary>
   </component>
@@ -800,7 +842,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542666504113</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="some steps to multiprocessing">
+      <created>1542774177696</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1542774177696</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView">
@@ -816,16 +865,15 @@
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.119936034" sideWeight="0.49565217" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33152175" sideWeight="0.51492536" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3923913" sideWeight="0.5181237" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33152175" sideWeight="0.48507464" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3923913" sideWeight="0.48294243" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30869564" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11886994" sideWeight="0.49565217" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3923913" sideWeight="0.48187634" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30869564" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11673774" sideWeight="0.5043478" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39456522" sideWeight="0.4978678" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -834,6 +882,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -841,20 +890,20 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3923913" sideWeight="0.50852877" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3923913" sideWeight="0.5181237" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.4978678" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33152175" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3923913" sideWeight="0.4914712" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33152175" sideWeight="0.48507464" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3923913" sideWeight="0.48187634" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30869564" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.117803834" sideWeight="0.49565217" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.119936034" sideWeight="0.49565217" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11673774" sideWeight="0.5043478" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39456522" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39456522" sideWeight="0.4978678" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -865,7 +914,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Идея для beboo.ru; план обхода." />
     <MESSAGE value="Прыжки и ужимки с venv." />
     <MESSAGE value="Add new good pr &amp; readme." />
     <MESSAGE value="Now add new good pr &amp; readme." />
@@ -890,7 +938,8 @@
     <MESSAGE value="add small csv" />
     <MESSAGE value="single user links done; add csv module" />
     <MESSAGE value="add TODO" />
-    <option name="LAST_COMMIT_MESSAGE" value="add TODO" />
+    <MESSAGE value="some steps to multiprocessing" />
+    <option name="LAST_COMMIT_MESSAGE" value="some steps to multiprocessing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -931,63 +980,16 @@
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tests/my_csv.py</url>
-          <line>3</line>
-          <option name="timeStamp" value="28" />
+          <url>file://$PROJECT_DIR$/beboo/part_of_scrap.py</url>
+          <line>213</line>
+          <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="30" />
+      <option name="time" value="39" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/some_vk/v_02_vk_easy.py" />
-    <entry file="file://$PROJECT_DIR$/proxy/proxy_checker v. 1.0.3/proxies.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/proxy/proxy_checker v. 1.0.3/proxies_good.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1224">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manga/nhentai.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="27" column="18" lean-forward="false" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/file.jpg" />
-    <entry file="file://$PROJECT_DIR$/manga/save_pic/1.jpg" />
-    <entry file="file://$PROJECT_DIR$/manga/save_pic/83.jpg" />
-    <entry file="file://$PROJECT_DIR$/beboo/find_all_country.py" />
-    <entry file="file://$PROJECT_DIR$/manga/proxies_good.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/masters_town/proxies_good.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/prainua/test_login_exit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="101" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/prainua/scrap_send.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1070,7 +1072,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1110,53 +1111,68 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/beboo/all_codes_country.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3604">
-          <caret line="212" column="2" lean-forward="false" selection-start-line="212" selection-start-column="2" selection-end-line="212" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/beboo/all_country.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3655">
           <caret line="215" column="14" lean-forward="false" selection-start-line="215" selection-start-column="14" selection-end-line="215" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/beboo/instruction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="18" column="92" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="92" />
-          <folding>
-            <element signature="e#2#32#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/beboo/data/users — копия.csv" />
-    <entry file="file://$PROJECT_DIR$/beboo/test.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state />
+    <entry file="file://$PROJECT_DIR$/beboo/test.csv" />
+    <entry file="file://$PROJECT_DIR$/wadawdwad.csv" />
+    <entry file="file://$PROJECT_DIR$/tests/adwwa.csv" />
+    <entry file="file://$PROJECT_DIR$/beboo/data/beboo.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/beboo/help.txt">
+    <entry file="file://$PROJECT_DIR$/beboo/data/users_links.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="37" lean-forward="false" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beboo/my_csv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/beboo/scrap_user_v3.py">
+    <entry file="file://$PROJECT_DIR$/threading_tests/test_1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="561">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proxy/proxy_checker v. 1.0.3/proxy_checker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2805">
+          <caret line="177" column="22" lean-forward="false" selection-start-line="177" selection-start-column="4" selection-end-line="177" selection-end-column="22" />
           <folding>
-            <element signature="e#0#10#0" expanded="false" />
+            <element signature="e#24#45#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beboo/get_users_links.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="688">
+          <caret line="55" column="23" lean-forward="false" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beboo/all_codes_country.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="857">
+          <caret line="212" column="2" lean-forward="false" selection-start-line="212" selection-start-column="2" selection-end-line="212" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -1165,7 +1181,31 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wadawdwad.csv">
+    <entry file="file://$PROJECT_DIR$/beboo/help.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="37" lean-forward="false" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Pycharm_venv/scrap_venv/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beboo/instruction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="25" column="26" lean-forward="false" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="33" />
+          <folding>
+            <element signature="e#2#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beboo/data/test_users.csv">
       <provider selected="true" editor-type-id="csv-data-editor">
         <state>
           <format>
@@ -1178,6 +1218,14 @@
                   </quotation>
                 </record-format>
               </data>
+              <header>
+                <record-format prefix="" suffix="" nullText="" quotationPolicy="as needed" valueSeparator="&#9;" recordSeparator="&#10;">
+                  <quotation>
+                    <quotes left="&quot;" right="&quot;" leftEscaped="&quot;&quot;" rightEscaped="&quot;&quot;" />
+                    <quotes left="'" right="'" leftEscaped="''" rightEscaped="''" />
+                  </quotation>
+                </record-format>
+              </header>
             </csv-format>
           </format>
         </state>
@@ -1186,28 +1234,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/adwwa.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
+    <entry file="file://$PROJECT_DIR$/tests/users_links_test.csv">
+      <provider editor-type-id="csv-text-editor">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/my_csv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/beboo/data/beboo.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/beboo/data/users_links.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1215,58 +1245,124 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/beboo/get_users_links.py">
+    <entry file="file://$PROJECT_DIR$/tests/data/test_users.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/data/test_users.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/users_links_iv.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beboo/part_of_scrap.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="688">
-          <caret line="55" column="23" lean-forward="false" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="23" />
+        <state relative-caret-position="600">
+          <caret line="211" column="57" lean-forward="false" selection-start-line="211" selection-start-column="57" selection-end-line="211" selection-end-column="57" />
           <folding>
-            <element signature="e#0#29#0" expanded="true" />
+            <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/beboo/my_csv.py">
+    <entry file="file://$PROJECT_DIR$/tests/my_csv.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/threading_tests/test_1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
+    <entry file="file://$PROJECT_DIR$/tests/data/iv_users.csv">
+      <provider selected="true" editor-type-id="csv-data-editor">
+        <state>
+          <format>
+            <csv-format name="Tab-separated (TSV)" id="Tab-separated (TSV)_id">
+              <data>
+                <record-format prefix="" suffix="" nullText="" quotationPolicy="as needed" valueSeparator="&#9;" recordSeparator="&#10;">
+                  <quotation>
+                    <quotes left="&quot;" right="&quot;" leftEscaped="&quot;&quot;" rightEscaped="&quot;&quot;" />
+                    <quotes left="'" right="'" leftEscaped="''" rightEscaped="''" />
+                  </quotation>
+                </record-format>
+              </data>
+              <header>
+                <record-format prefix="" suffix="" nullText="" quotationPolicy="as needed" valueSeparator="&#9;" recordSeparator="&#10;">
+                  <quotation>
+                    <quotes left="&quot;" right="&quot;" leftEscaped="&quot;&quot;" rightEscaped="&quot;&quot;" />
+                    <quotes left="'" right="'" leftEscaped="''" rightEscaped="''" />
+                  </quotation>
+                </record-format>
+              </header>
+            </csv-format>
+          </format>
         </state>
+      </provider>
+      <provider editor-type-id="csv-text-editor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/beboo/scrapping.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="272" column="79" lean-forward="true" selection-start-line="272" selection-start-column="8" selection-end-line="272" selection-end-column="79" />
+        <state relative-caret-position="310">
+          <caret line="279" column="34" lean-forward="false" selection-start-line="279" selection-start-column="22" selection-end-line="279" selection-end-column="34" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/proxy/proxy_checker v. 1.0.3/proxy_checker.py">
+    <entry file="file://$PROJECT_DIR$/beboo/scrap_user_v3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="689">
-          <caret line="177" column="22" lean-forward="false" selection-start-line="177" selection-start-column="4" selection-end-line="177" selection-end-column="22" />
+        <state relative-caret-position="-94">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="11" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ghostdriver.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geckodriver.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/alone_scrapping_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="120" selection-end-column="23" />
           <folding>
-            <element signature="e#24#45#0" expanded="true" />
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/beboo/part_of_scrap.py">
+    <entry file="file://$PROJECT_DIR$/beboo/alone_scrapping.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="201" column="52" lean-forward="true" selection-start-line="201" selection-start-column="52" selection-end-line="201" selection-end-column="52" />
+        <state relative-caret-position="4046">
+          <caret line="238" column="48" lean-forward="false" selection-start-line="238" selection-start-column="48" selection-end-line="238" selection-end-column="48" />
           <folding>
-            <element signature="e#0#22#0" expanded="true" />
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
