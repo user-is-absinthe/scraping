@@ -9,13 +9,14 @@ from selenium.webdriver.common.keys import Keys
 from selenium.common import exceptions as selenium_exception
 import requests
 
-USER_NAME = 'iv'
+USER_NAME = 'my'
 PATH_TO_DATA = 'data'
 
 PATH_TO_PROXY = 'proxies_good.txt'
 
 # PATH_TO_USERS_LINKS = PATH_TO_DATA + '/users_links_' + USER_NAME + '.csv'
-PATH_TO_USERS_LINKS = 'users_links_' + USER_NAME + '.csv'
+# PATH_TO_USERS_LINKS = 'users_links_' + USER_NAME + '.csv'
+PATH_TO_USERS_LINKS = 'new_users_links.csv'
 PATH_TO_LOG = PATH_TO_DATA + '/' + USER_NAME + '_users.log'
 PATH_TO_USERS_INFORMATION = PATH_TO_DATA + '/' + USER_NAME + '_users.csv'
 PATH_TO_PHOTOS_LINKS = PATH_TO_DATA + '/photos_links_from_' + USER_NAME + '.csv'
@@ -195,8 +196,12 @@ def scr_user(dr, number_user, link_to_user, region_code):
 
         [this.insert(0, id_user) for this in users_photos_links]  # add user id to photo
         #  save photos links
-        for photo_plus in users_photos_links:
-            save_photo(photo_plus)
+        for index in range(len(users_photos_links)):
+            try:
+                save_photo(users_photos_links[index])
+            except requests.exceptions.ProxyError:
+                information('WARNING!\tError with proxy.')
+                index -= 1
         pass
     pass
 
