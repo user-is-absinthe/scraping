@@ -221,7 +221,8 @@ def save_photo(photo_inform):
     number = photo_inform[1]
     photo_link = photo_inform[2]
     photo_big_link = photo_link.replace('800x800', '1200x1200')
-    now_proxy = ALL_PROXY[random.randint(0, len(ALL_PROXY) - 1)]
+    # now_proxy = ALL_PROXY[random.randint(0, len(ALL_PROXY) - 1)]
+    now_proxy = ALL_PROXY[random.choice(ALL_PROXY)]
     to_get = {'http': now_proxy}
     to_save = requests.get(photo_big_link, proxies=to_get)
     if to_save.status_code == 404:
