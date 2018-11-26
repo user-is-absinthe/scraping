@@ -6,3 +6,4 @@ modules.xml
 scraping.iml
 vcs.xml
 workspace.xml
+*.xml
