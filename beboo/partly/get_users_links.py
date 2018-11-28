@@ -1,16 +1,22 @@
 from datetime import datetime
+import os
 
 import my_csv
 from selenium import webdriver
 
-PATH_TO_LOG = 'data/users_links.log'
-PATH_TO_USERS_LINKS = 'data/new_users_links.csv'
+PATH_TO_DATA = 'data'
 
 PATH_TO_COUNTRY_CODE = 'all_codes_country.txt'
 PATH_TO_DRIVER = 'C:\\Users\Worker\Pycharm\Pycharm_project\scraping\\beboo\chromedriver'
 
-# USERS_INFORMATION = list()
+PATH_TO_LOG = PATH_TO_DATA + '/users_links.log'
+PATH_TO_USERS_LINKS = PATH_TO_DATA + '/users_links.csv'
+
 ALL_LINKS = 0
+
+
+if not os.path.exists(PATH_TO_DATA):
+    os.makedirs(PATH_TO_DATA)
 
 
 def load_country_code(path=PATH_TO_COUNTRY_CODE):
@@ -35,7 +41,6 @@ def get_links(first_page, country):
     driver.get(first_page)
 
     users_links_by_country = list()
-    # users_links_by_country = set()
 
     page = 1
     users_last_page = []
@@ -87,6 +92,4 @@ def main():
 
 
 if __name__ == '__main__':
-    # my_csv.csv_line_writer(path='123.csv', data=[1, 2, 3])
-    # my_csv.csv_data_writer(path='1233.csv', data=[[1, 2, 3], [1, 1, 1]])
     main()
