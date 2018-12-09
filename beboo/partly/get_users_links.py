@@ -2,6 +2,7 @@ from datetime import datetime
 import os
 
 import my_csv
+
 from selenium import webdriver
 
 PATH_TO_DATA = 'data'

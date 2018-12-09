@@ -23,7 +23,7 @@ def csv_data_writer(path, data, separator='\t', encode='utf-16'):
     pass
 
 
-def csv_reader(path, separator, headline=False, encode='utf-16'):
+def csv_reader(path, separator='\t', headline=False, encode='utf-16'):
     with open(path, 'r', encoding=encode) as file:
         csv_file = file.readlines()
     csv_file = [this.strip() for this in csv_file]
