@@ -8,7 +8,7 @@ import requests
 import fake_useragent
 
 
-PATH_TO_LINKS = 'C:\\Users\Worker\Pycharm\Pycharm_project\scraping\\beboo\partly\data\\test_photos_links_all.csv'
+PATH_TO_LINKS = 'C:\\Users\Worker\Pycharm\Pycharm_project\scraping\\beboo\partly\data\photos_links_30k.csv'
 PATH_TO_PROXIES = 'C:\\Users\Worker\Pycharm\Pycharm_project\scraping\\beboo\partly\data\proxies_good.txt'
 PATH_TO_PHOTOS = 'data/photos'
 
