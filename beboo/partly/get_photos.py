@@ -5,7 +5,7 @@ import fake_useragent
 
 PATH_TO_PHOTOS = 'data/photos/'
 PATH_TO_PHOTOS_LINKS = 'data/'
-PATH_TO_PROXIES = '/Users/owl/Pycharm/PycharmProjects/scraping/beboo/partly/data/proxies_good.txt'
+PATH_TO_PROXIES = 'data/proxies_good.txt'
 
 
 PROXIES_LIST = list()
@@ -14,7 +14,7 @@ PROXIES_LIST = list()
 def main():
     global PROXIES_LIST
     PROXIES_LIST = load_proxies()
-    data = load_links('/Users/owl/Pycharm/PycharmProjects/scraping/beboo/partly/data/test_photos_links_all.csv')
+    data = load_links('data/test_photos_links_all.csv')
     for number, photo in enumerate(data):
         print('Work with {}/{} ({}% done) photo.'.format(
             number,
@@ -57,13 +57,13 @@ def save_photo(user_id, photo_id, photo_link):
     try:
         to_save = requests.get(
             url=photo_big_link,
-            headers=user_agent,
+            # headers=user_agent,
             proxies=proxy
         )
         if to_save.status_code == 404:
             to_save = requests.get(
                 url=photo_link,
-                headers=user_agent,
+                # headers=user_agent,
                 proxies=proxy
             )
     except requests.ConnectionError or requests.Timeout or requests.ConnectTimeout:

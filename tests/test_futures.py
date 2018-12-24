@@ -1,11 +1,13 @@
 import concurrent.futures
 import urllib.request
 
-URLS = ['http://www.foxnews.com/',
-        'http://www.cnn.com/',
-        'http://europe.wsj.com/',
-        'http://www.bbc.co.uk/',
-        'http://some-made-up-domain.com/']
+URLS = [
+    'http://www.foxnews.com/',
+    'http://www.cnn.com/',
+    'http://europe.wsj.com/',
+    'http://www.bbc.co.uk/',
+    'http://some-made-up-domain.com/'
+]
 
 
 # Retrieve a single page and report the url and contents
